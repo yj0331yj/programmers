@@ -5,7 +5,7 @@ def solution(s):
         # '('일 경우 스택에 넣기
         if i == '(': 
             stack.append(i)
-        # ')'일 경우 스택에서 여는 괄호를 제거 -> 스택이 비어있다면 짝이 맞지 않으므로 False를 반환
+        # ')'일 경우 스택에서 '('를 제거 -> 스택이 비어있다면 짝이 맞지 않으므로 False를 반환
         elif i == ')':
             if stack:
                 stack.pop()
