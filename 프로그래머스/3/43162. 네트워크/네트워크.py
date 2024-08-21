@@ -1,5 +1,4 @@
 from collections import deque
-
 def solution(n, computers):
     answer = 0
     visited = [False] * n
@@ -17,9 +16,10 @@ def solution(n, computers):
                         q.append(next_v)
                         visited[next_v] = True
                         bfs(next_v)
-                        
+    
     for cur_v in range(n):
         if not visited[cur_v]:
             bfs(cur_v)
             answer += 1
+            
     return answer
